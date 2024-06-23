@@ -66,12 +66,12 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className="md:mx-auto mx-3 my-10 p-5 rounded-xl bg-teal-200 min-h-[80vh] md:w-1/2 ">
+      <div className="md:mx-auto mx-3 my-10 p-5 rounded-xl bg-purple-200 min-h-[80vh] md:w-1/2 ">
        <h1 className='font-bold text-center text-xl'>Tasker - Manage your Tasks at one Place</h1>
         <div className="addTodo ms-10">
           <h2 className='text-lg font-bold my-3 mt-5'>Add Todo</h2>
           <input onChange={handleChange} value={todo} className='md:w-7/12 lg:w-9/12 w-1/2 p-2 rounded-md' type="text" />
-          <button onClick={handleAdd}disabled={todo.length<5} className='bg-teal-800 hover:bg-teal-950 px-5 py-2.5 text-white text-sm font-bold rounded-md mx-4'>Add</button>
+          <button onClick={handleAdd}disabled={todo.length<5} className='bg-purple-800 hover:bg-purple-950 px-5 py-2.5 text-white text-sm font-bold rounded-md mx-4'>Add</button>
         </div>
         <input onChange={ToggleFinished} type="checkbox" checked={showFinished} className='mt-5 ms-10' /> Show Finished
         <h2 className='text-lg font-bold my-4 ms-10'>Your Todos</h2>
@@ -84,8 +84,8 @@ function App() {
                 <div className={item.isCompleted ? "line-through" : ""}>{item.todo}</div>
               </div>
               <div className="buttons">
-                <button onClick={(e) => { handleEdit(e, item.id) }} className='bg-teal-800 hover:bg-teal-950 px-2 py-2 text-white text-sm font-bold rounded-md mx-1'><FaEdit /></button>
-                <button onClick={(e) => { handleDelete(e, item.id) }} className='bg-teal-800 hover:bg-teal-950 px-2 py-2 text-white text-sm font-bold rounded-md mx-1'><MdDelete /></button>
+                <button onClick={(e) => { handleEdit(e, item.id) }} className='bg-purple-800 hover:bg-teal-950 px-2 py-2 text-white text-sm font-bold rounded-md mx-1'><FaEdit /></button>
+                <button onClick={(e) => { handleDelete(e, item.id) }} className='bg-purple-800 hover:bg-teal-950 px-2 py-2 text-white text-sm font-bold rounded-md mx-1'><MdDelete /></button>
               </div>
             </div>
          } )}
